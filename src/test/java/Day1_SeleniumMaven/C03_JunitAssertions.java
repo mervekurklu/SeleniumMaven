@@ -15,6 +15,15 @@ public class C03_JunitAssertions {
 //    2- Test if the title does not contain Facebook.
 //    3- Test that the Amazon logo appears in the upper left corner.
 
+    //    assertEquals
+//    assertTrue
+//    assertFalse
+//    assertNull
+//    assertNotNull
+//    assertSame
+//    assertNotSame
+//    assertArrayEquals
+
     WebDriver driver;
 
     @Before
@@ -35,7 +44,7 @@ public class C03_JunitAssertions {
         System.out.println("currenturl = " + currenturl);
 
         // URL amazon kelimesi iceriyor mu kontrol saglanıyor..
-        Assert.assertTrue(currenturl.contains("amazon"));
+        Assert.assertTrue("url Amazon içermiyor",currenturl.contains("amazon"));
 
     }
     @Test
@@ -45,4 +54,8 @@ public class C03_JunitAssertions {
         Assert.assertFalse(title.contains("Facebook"));
 
     }
+
+   
+
+
 }
